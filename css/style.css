@@ -3,3 +3,66 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+/* contenitore principale */
+
+.container {
+  width: 70%;
+  height: 60vh;
+  position:absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+/* due contenitori interni alcontenitore principale */
+
+.container .container-left,
+.container .container-right {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.container-left {
+  width:80%;
+  float:left;
+}
+
+.container-right {
+  width:20%;
+  float:left;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear:both;
+}
+
+/* scritte del contenitore a destra */
+
+.scritte {
+  float:right;
+}
+
+
+/* debug */
+
+
+.debug .container {
+  background-color: yellow;
+
+}
+.debug .container-left,
+.debug .container-right {
+  border:1px solid black;
+}
+
+.debug .container-left .scritte {
+  border:1px solid black;
+  width:20%;
+  height:20%;
+}
