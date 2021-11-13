@@ -35,6 +35,8 @@
 .container-right {
   width:20%;
   float:left;
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -87,7 +89,12 @@
 
 .arrow {
   /* spostarlo con flex */
+  margin:5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 
 .arrow :nth-child(1) {
   font-size: 25px;
