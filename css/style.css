@@ -37,25 +37,40 @@
 
 
 /* scritte del contenitore a destra */
-
-.container-left .scritte {
-  color:white;
-  font-size: 20px;
-  font-weight:900;
+ 
+ .container-under-left {
   position:absolute;
-  bottom:0;
-  left:80%;
+  bottom:30px;
+  left:65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+ }
+
+ .titles {
+  display: none;
+  color:white;
+  font-size: 20px;
+  font-weight:900;
+}
+
+.activetitles {
+  display: block;
 }
 
 /* items */
 
-.container-right .item {
-  height:calc(100% / 5);
+
+ .item {
+  display: none;
+  height:100%;
   width:100%;
+  object-fit: cover;
+}
+
+.active {
+  display: block;
 }
 
 /* arrows */
@@ -89,6 +104,8 @@
 }
 
 
+
+
 /* debug */
 
 
@@ -101,7 +118,7 @@
   border:1px solid black;
 }
 
-.debug .container-left .scritte {
+.debug .container-left .title {
   border:1px solid black;
   width:20%;
   height:20%;
