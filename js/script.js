@@ -1,5 +1,5 @@
 
-// generare ARRAY
+// PRIMO ARRAY
 const imagesArray = [
   'img/01.jpg',
   'img/02.jpg',
@@ -65,7 +65,7 @@ up.addEventListener("click", function() {
   item[activeItem].classList.add("active");
 }});
 
-
+// SECONDO ARRAY
 
 const titlesArray = [
   'Svezia',
@@ -92,7 +92,7 @@ for(i = 0; i<titlesArray.length; i++) {
 console.log(titles);
 
 // inseriamo gli elementi nella posizione desiderata
-let containertitoli = document.querySelector(".container-under-left");
+let containertitoli = document.querySelector(".container-title");
 containertitoli.innerHTML = titles;
 
 // selezioniamo tutti gli item per rendere il primo attivo
@@ -125,4 +125,66 @@ up.addEventListener("click", function() {
   activeTitle--;
 
   title[activeTitle].classList.add("active");
+}});
+
+
+// TERZO ARRAY
+
+const textsArray = [
+  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+  'Lorem ipsum',
+  'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+  'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+];
+
+
+// generare gli elementi da inserire nell'html
+
+let texts = "";
+
+for(i = 0; i<textsArray.length; i++) {
+  texts +=
+   `
+  <div class="texts">
+   ${textsArray[i]}
+  </div>
+  `;
+}
+
+console.log(texts);
+
+// inseriamo gli elementi nella posizione desiderata
+let containertesti = document.querySelector(".container-under-title");
+containertesti.innerHTML = texts;
+
+// selezioniamo tutti gli item per rendere il primo attivo
+let text = document.getElementsByClassName("texts");
+console.log(text[0]);
+let activeText = 0;
+text[activeText].classList.add("active");
+
+
+down.addEventListener("click", function() {
+
+  if( activeText < textsArray.length -1) {
+  // rimuovere la classe active dall'elemento
+  text[activeText].classList.remove("active");
+  // incrementare l'active di 1
+  activeText++;
+
+  text[activeText].classList.add("active");
+}});
+
+
+
+
+up.addEventListener("click", function() {
+  if( activeText > 0) {
+  // rimuovere la classe active dall'elemento
+  text[activeText].classList.remove("active");
+  // incrementare l'active di 1
+  activeText--;
+
+  text[activeText].classList.add("active");
 }});
