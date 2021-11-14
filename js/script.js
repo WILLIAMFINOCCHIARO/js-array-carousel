@@ -196,7 +196,7 @@ up.addEventListener("click", function() {
 
 // container-right
 
-// PRIMO ARRAY
+//  ARRAY
 const imagsArray = [
   'img/01.jpg',
   'img/02.jpg',

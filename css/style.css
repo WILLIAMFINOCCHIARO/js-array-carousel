@@ -31,6 +31,7 @@
   width:80%;
   float:left;
   position: relative;
+  border:3px solid black;
 }
 
 .container-right {
@@ -69,10 +70,7 @@
 
 }
 
-
-
 /* items */
-
 
  .item {
   display: none;
@@ -106,13 +104,11 @@
   bottom: 10px;
 }
 
-
-
-
 /* images */
 
 .container-under-right {
   height: 100%;
+  background-color: black;
 }
 
 .container img {
@@ -125,12 +121,21 @@
 
  .imags {
   height: calc(100% / 5);
-  width:100% ;
+  width:100%;
+  opacity: 0.5;
+  
 }
+
+/* .imags img {
+  
+} */
 
 .white {
   border:3px solid white;
+  opacity: 1;
 }
+
+
 
 
 
