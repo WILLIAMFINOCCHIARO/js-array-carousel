@@ -17,6 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border:3px solid black;
 }
 
 /* due contenitori interni alcontenitore principale */
@@ -109,31 +110,42 @@
 
 
 /* images */
+
+.container-under-right {
+  height: 100%;
+}
+
 .container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* container-right items */
+
+ .imags {
+  height: calc(100% / 5);
+  width:100% ;
+}
+
+.white {
+  border:3px solid white;
+}
 
 
 
 /* debug */
 
 
-.debug .container {
+/* .debug .container {
   background-color: yellow;
 
-}
-.debug .container-left,
+} */
+/* .debug .container-left,
 .debug .container-right .imag {
   border:1px solid black;
-}
+} */
 
-.debug .container-right .imag {
-  height: calc(100% / 5);
-  width:100% ;
-}
 /* 
 .debug .container-left .title {
   border:1px solid black;

@@ -1,4 +1,7 @@
 
+// container-left
+
+
 // PRIMO ARRAY
 const imagesArray = [
   'img/01.jpg',
@@ -187,4 +190,70 @@ up.addEventListener("click", function() {
   activeText--;
 
   text[activeText].classList.add("active");
+}});
+
+
+
+// container-right
+
+// PRIMO ARRAY
+const imagsArray = [
+  'img/01.jpg',
+  'img/02.jpg',
+  'img/03.jpg',
+  'img/04.jpg',
+  'img/05.jpg'
+];
+
+// generare gli elementi da inserire nell'html
+
+let imags ="";
+
+for(i = 0; i<imagesArray.length; i++) {
+  imags +=
+   `
+  <div class="imags">
+  <img src="${imagesArray[i]}" alt="${imagesArray[i]}">
+  </div>
+  `;
+}
+
+console.log(imags);
+
+// inseriamo gli elementi nella posizione desiderata
+const imagscontainer = document.querySelector(".container-under-right");
+imagscontainer.innerHTML = imags;
+
+// selezioniamo tutti gli item per rendere il primo attivo
+const imag = document.getElementsByClassName("imags");
+console.log(imag[0]);
+let activeImag = 0;
+imag[activeImag].classList.add("white");
+
+
+
+down.addEventListener("click", function() {
+
+  if( activeImag < imagsArray.length -1) {
+  // rimuovere la classe active dall'elemento
+  imag[activeImag].classList.remove("white");
+  // incrementare l'active di 1
+  activeImag++;
+
+  imag[activeImag].classList.add("white");
+}});
+
+
+
+
+
+
+up.addEventListener("click", function() {
+  if( activeImag > 0) {
+  // rimuovere la classe active dall'elemento
+  imag[activeImag].classList.remove("white");
+  // incrementare l'active di 1
+  activeImag--;
+
+  imag[activeImag].classList.add("white");
 }});
