@@ -35,8 +35,7 @@
 .container-right {
   width:20%;
   float:left;
-  display: flex;
-  justify-content: center;
+  position: relative;
 }
 
 
@@ -88,20 +87,25 @@
 /* arrows */
 
 .arrow {
-  /* spostarlo con flex */
-  margin:5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-
-.arrow :nth-child(1) {
   font-size: 25px;
   border: 5px;
   border-radius: 100%;
   background-color: #cccccc;
+  margin:5px;
+  position: absolute;
+  left:50%;
+  transform: translate( -50%);
 }
+
+.arrow.up {
+  top:10px;
+}
+
+.arrow.down {
+  bottom: 10px;
+}
+
+
 
 
 /* images */
@@ -122,8 +126,13 @@
 
 }
 .debug .container-left,
-.debug .container-right {
+.debug .container-right .imag {
   border:1px solid black;
+}
+
+.debug .container-right .imag {
+  height: calc(100% / 5);
+  width:100% ;
 }
 /* 
 .debug .container-left .title {
